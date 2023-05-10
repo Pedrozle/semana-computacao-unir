@@ -1,0 +1,8 @@
+:root {
+    --cinza-mais-escuro: #121214;
+}
+
+body {
+    background-color: var(--cinza-mais-escuro);
+    color: white;
+}
