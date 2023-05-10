@@ -1,8 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Nova+Mono&family=Ysabeau:ital,wght@0,1;0,400;0,800;1,1&display=swap");
+
 :root {
     --cinza-mais-escuro: #121214;
+    --cinza-claro: #d9d9d9;
+
+    --azul-unir: #0b3cba;
 }
 
 body {
+    font-family: "Nova Mono", monospace;
+    font-family: "Ysabeau", sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: var(--cinza-mais-escuro);
     color: white;
+    margin: 0;
+}
+
+.botao {
+    border-radius: 20px;
+    background-color: var(--azul-unir);
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.7s;
+}
+
+.botao:hover {
+    background-color: blue;
+    text-decoration: underline;
+}
+
+/* =================================================================
+//                           CABEÇALHO
+// =================================================================*/
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    margin-left: 300px;
+}
+
+.nav-links a {
+    font-size: 1.3em;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+}
+
+.nav-links .botao {
+    padding: 15px 30px;
+}
+
+/* =================================================================
+//                             CONTEUDO
+// =================================================================*/
+
+
+
+/* =================================================================
+//                             RODAPÉ
+// =================================================================*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--cinza-claro);
+    color: black;
+}
+
+footer a {
+    color: black;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 100px;
+}
+
+.footer-content .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.dacc {
+    display: flex;
+    flex-direction: column;
+    max-width: 35%;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+}
+
+.links a {
+    margin: 10px;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    max-width: 35%;
+}
+
+.copyright .pessoa {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.copyright img {
+    margin-right: 20px;
+    border-radius: 50%;
 }
