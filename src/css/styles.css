@@ -4,7 +4,8 @@
     --cinza-bem-mais-escuro: #121214;
     --cinza-mais-escuro: #1e1e21;
     --cinza-escuro: #656565;
-    --cinza-claro: #d9d9d9;
+    --cinza-meio-escuro: #b7b7b7;
+    --cinza-claro: #cbcbcb;
 
     --azul-unir: #0b3cba;
 }
@@ -208,28 +209,142 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
-.onde .info .title{
+.onde .info .title {
     font-size: 1.5em;
     font-weight: bold;
 }
 
-.onde .info p{
+.onde .info p {
     font-size: 1.2em;
 }
 
-.onde .info .map{
+.onde .info .map {
+    margin-left: 50px;
     border-radius: 10px;
+    position: relative;
+    z-index: 10;
 }
 
 .onde .info img {
     margin-left: 20px;
     width: 500px;
-    height:  350px;
+    height: 350px;
     object-fit: cover;
     border-radius: 10px;
     z-index: 1;
+}
+
+/*-----------------------------------------------------------------*/
+
+.middle_banner {
+    background-color: var(--cinza-bem-mais-escuro);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle_banner .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divider::before {
+    margin-bottom: 50px;
+}
+
+.divider::after {
+    margin-top: 75px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #cecece5e;
+    width: 60%;
+    border-radius: 20px;
+}
+
+.conteudo .title {
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.conteudo .botao-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.conteudo .botao {
+    padding: 25px 25px;
+    border-radius: 50px;
+    font-size: 1.5em;
+}
+
+/*-----------------------------------------------------------------*/
+
+#palestras {
+    display: flex;
+    background-color: var(--cinza-claro);
+    color: black;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+#palestras .conteudo {
+    border-radius: 20px;
+    background-color: var(--cinza-meio-escuro);
+    min-width: 70%;
+    min-height: 300px;
+    padding: 20px 50px 50px 50px;
+}
+
+#palestras .conteudo .title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#palestras .conteudo .myCarrossel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myCarrossel-item {
+    display: flex;
+    justify-content: center;
+}
+
+.legenda {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 25%;
+    padding: 20px 0;
+}
+
+.legenda p {
+    padding: 0 50px;
+}
+
+#palestras .conteudo .legenda .title {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.carousel-inner img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
 }
 
 /* =================================================================

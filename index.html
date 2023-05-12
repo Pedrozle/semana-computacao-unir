@@ -5,6 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>VI Semana da Computação - UNIR</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        />
         <link rel="stylesheet" href="./src/css/styles.css" />
     </head>
     <body>
@@ -99,20 +105,177 @@
                     <div>
                         <p class="title">Onde vai ocorrer?</p>
                         <p>
-                            Campus José Ribeiro Filho, BR 364 km 9,5 - Porto
-                            Velho - Rondônia - Brasil
+                            Campus José Ribeiro Filho, BR 364 km 9,5 <br />
+                            Porto Velho - Rondônia - Brasil
                         </p>
-                        <iframe class="map"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1971.2316385864976!2d-63.94083794341859!3d-8.836385997419478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92325ffc7052e071%3A0x89d78cf0347001a4!2sUNIR%20-%20Campus%20Jos%C3%A9%20Ribeiro%20Filho!5e0!3m2!1spt-BR!2sbr!4v1683767512203!5m2!1spt-BR!2sbr"
-                                width="400"
-                                height="250"
-                                style="border: 0"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                            ></iframe>
                     </div>
-                    <img src="./src/img/unir.webp" alt="" />
+
+                    <iframe
+                        class="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1971.2316385864976!2d-63.94083794341859!3d-8.836385997419478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92325ffc7052e071%3A0x89d78cf0347001a4!2sUNIR%20-%20Campus%20Jos%C3%A9%20Ribeiro%20Filho!5e0!3m2!1spt-BR!2sbr!4v1683767512203!5m2!1spt-BR!2sbr"
+                        width="600"
+                        height="350"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+            <div class="middle_banner">
+                <div class="conteudo divider">
+                    <p class="title">Inscreva-se para a Semana da Computação</p>
+                    <div class="botao-container">
+                        <a class="botao" target="_blank" href="/"
+                            >Quero Participar!</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div id="palestras">
+                <div class="conteudo">
+                    <p class="title">Palestras</p>
+                    <div class="myCarrossel">
+                        <div
+                            id="carouselExampleCaptions"
+                            class="carousel slide"
+                            data-bs-ride="carousel"
+                        >
+                            <div class="carousel-indicators">
+                                <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleCaptions"
+                                    data-bs-slide-to="0"
+                                    class="active"
+                                    aria-current="true"
+                                    aria-label="Slide 1"
+                                ></button>
+                                <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleCaptions"
+                                    data-bs-slide-to="1"
+                                    aria-label="Slide 2"
+                                ></button>
+                                <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleCaptions"
+                                    data-bs-slide-to="2"
+                                    aria-label="Slide 3"
+                                ></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div
+                                    data-bs-interval="5000"
+                                    class="carousel-item active"
+                                >
+                                    <div class="myCarrossel-item">
+                                        <img
+                                            src="./src/img/palestrante1.jpg"
+                                            class="d-block"
+                                            alt="..."
+                                        />
+                                        <div class="legenda">
+                                            <p class="title">
+                                                Uso da Inteligencia Artificial
+                                                no trabalho
+                                            </p>
+                                            <p>
+                                                A inteligência artificial é uma
+                                                área da ciência da computação
+                                                que busca criar sistemas capazes
+                                                de realizar tarefas que
+                                                normalmente exigem inteligência
+                                                humana. Nesta palestra, vamos
+                                                apresentar os conceitos básicos
+                                                da inteligência artificial, os
+                                                principais desafios e
+                                                aplicações, e as implicações
+                                                éticas e sociais do seu uso.
+                                            </p>
+                                            <p>dia x as</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    data-bs-interval="5000"
+                                    class="carousel-item"
+                                >
+                                    <div class="myCarrossel-item">
+                                        <img
+                                            src="./src/img/palestrante2.jpg"
+                                            class="d-block"
+                                            alt="..."
+                                        />
+                                        <div class="legenda">
+                                            <p class="title">
+                                                Implementando um banco de dados
+                                                NoSql
+                                            </p>
+                                            <p>
+                                                Nesta palestra, você vai
+                                                aprender o que são bancos de
+                                                dados NoSQL, como eles
+                                                funcionam, quais são os seus
+                                                benefícios e desafios, e como
+                                                usá-los em diferentes cenários
+                                                de aplicação. Você vai conhecer
+                                                os principais tipos de bancos de
+                                                dados NoSQL, como colunas,
+                                                grafos, chave-valor e documento,
+                                                e ver exemplos de ferramentas
+                                                populares, como MongoDB,
+                                                Cassandra, Redis e Azure Cosmos
+                                                DB.
+                                            </p>
+                                            <p>dia x as</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    data-bs-interval="5000"
+                                    class="carousel-item"
+                                >
+                                    <div class="myCarrossel-item">
+                                        <img
+                                            src="./src/img/palestrante3.jpg"
+                                            class="d-block"
+                                            alt="..."
+                                        />
+                                        <div class="legenda">
+                                            <p class="title">
+                                                Jogos digitais e como ganhar
+                                                dinheiro
+                                            </p>
+                                            <p>
+                                                Um possível resumo de uma
+                                                palestra sobre jogos digitais é:
+                                                Nesta palestra, vamos explorar o
+                                                conceito, o mercado e as áreas
+                                                de atuação dos jogos digitais,
+                                                que são uma das maiores
+                                                tendências do mundo atual. Jogos
+                                                digitais são aqueles que
+                                                utilizam dispositivos e
+                                                plataformas eletrônicas para
+                                                criar e reproduzir experiências
+                                                lúdicas, educativas ou
+                                                simuladas.
+                                            </p>
+                                            <p>dia x as</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="minicursos"></div>
+            <div id="trabalhos"></div>
+            <div class="middle_banner">
+                <div class="conteudo divider">
+                    <p class="title">Comissão organizadora</p>
+                    <p>As pessoas que ajudaram a tornar isso possível</p>
                 </div>
             </div>
         </main>
@@ -170,5 +333,10 @@
                 </div>
             </div>
         </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>
