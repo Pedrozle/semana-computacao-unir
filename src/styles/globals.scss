@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Nova+Mono&family=Ysabeau:ital,wght@0,1;0,400;0,800;1,1&display=swap");
+
+$cinza-claro: #656565;
+$cinza-meio-escuro: #4c5256;
+$cinza: #414649;
+$cinza-mais-escuro: #353a3c;
+$cinza-bem-mais-escuro: #181a1b;
+
+$azul-unir: #0b3cba;
+
+body {
+    font-family: "Nova Mono", monospace;
+    font-family: "Ysabeau", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    background-color: $cinza-bem-mais-escuro;
+    color: white;
+    margin: 0;
+}
