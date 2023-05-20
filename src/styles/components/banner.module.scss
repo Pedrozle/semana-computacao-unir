@@ -1,0 +1,58 @@
+@import './../variables.scss';
+
+.inicio {
+    background-image: url(./../../assets/banner.png);
+    background-position: center;
+    background-repeat: repeat;
+    transition: 0.7s;
+    min-height: 500px;
+    background-size: 1500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio:hover {
+    background-position: center;
+    background-size: 2000px;
+}
+
+.banner_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+}
+
+.banner_content .title {
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+
+.descricao {
+    font-size: 1.5em;
+}
+
+.botao_info {
+    padding: 20px;
+}
+
+@media screen and (max-width: 767px) {
+
+    #inicio {
+        background-size: 700px;
+        min-height: 300px;
+    }
+
+    .banner_content .title {
+        font-size: 1.5em;
+    }
+
+    .descricao {
+        font-size: 1em;
+    }
+}

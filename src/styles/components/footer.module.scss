@@ -1,22 +1,22 @@
-@import './../../../styles/globals.scss';
+@import './../variables.scss';
 
-footer {
+.footer {
     background-color: $cinza;
     color: white;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.footer-content {
+.footer_content {
     display: flex;
 }
 
-.footer-content a {
+.footer_content a {
     text-decoration: none;
     color: $azul;
 }
 
-.footer-content a:hover{
+.footer_content a:hover {
     text-decoration: underline;
 }
 
@@ -24,11 +24,11 @@ footer {
     width: 50%;
 }
 
-.copyright{
+.copyright {
     width: 30%;
 }
 
-.title{
+.title {
     font-size: 1.2em;
     font-weight: bold;
 }
@@ -38,25 +38,25 @@ footer {
     flex-direction: column;
 }
 
-.links a{
+.links a {
     margin-bottom: 30px;
 }
 
-.copyright p{
+.copyright p {
     width: 110%;
 }
 
-.pessoa{
+.pessoa {
     margin-bottom: 20px;
 
-    img{
+    img {
         margin-right: 20px;
         border-radius: 50px;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .footer-content {
+    .footer_content {
         flex-direction: column;
         padding-left: 10px;
         padding-right: 30px;
@@ -68,7 +68,7 @@ footer {
         width: auto;
     }
 
-    .links{
+    .links {
         min-height: 200px;
     }
 }

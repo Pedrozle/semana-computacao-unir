@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Nova+Mono&family=Ysabeau:ital,wght@0,1;0,400;0,800;1,1&display=swap");
-
-$cinza-claro: #656565;
-$cinza-meio-escuro: #4c5256;
-$cinza: #414649;
-$cinza-mais-escuro: #353a3c;
-$cinza-bem-mais-escuro: #181a1b;
-
-$azul-unir: #0b3cba;
-$azul: #20b8ff;
+@import './variables.scss';
 
 body {
     font-family: "Nova Mono", monospace;
