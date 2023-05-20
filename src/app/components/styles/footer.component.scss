@@ -1,0 +1,74 @@
+@import './../../../styles/globals.scss';
+
+footer {
+    background-color: $cinza;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-content {
+    display: flex;
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: $azul;
+}
+
+.footer-content a:hover{
+    text-decoration: underline;
+}
+
+.dacc {
+    width: 50%;
+}
+
+.copyright{
+    width: 30%;
+}
+
+.title{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.links a{
+    margin-bottom: 30px;
+}
+
+.copyright p{
+    width: 110%;
+}
+
+.pessoa{
+    margin-bottom: 20px;
+
+    img{
+        margin-right: 20px;
+        border-radius: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer-content {
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 30px;
+    }
+
+    .dacc,
+    .links,
+    .copyright {
+        width: auto;
+    }
+
+    .links{
+        min-height: 200px;
+    }
+}
