@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-import "./styles/footer.component.scss";
+import styles from "@/styles/components/footer.module.scss";
 
 export default function Footer() {
     return (
-        <footer>
+        <footer className={styles.footer}>
             <div className="container">
-                <div className="footer-content">
-                    <div className="dacc">
+                <div className={styles.footer_content}>
+                    <div className={styles.dacc}>
                         <Image
                             src="https://dacc.unir.br/uploads/91919191/diversos/Logo%20DACC%202017.png"
                             alt="Logo DACC"
@@ -22,22 +22,23 @@ export default function Footer() {
                             informática e da computação.
                         </p>
                     </div>
-                    <div className="links">
-                        <p className="title">Links Rápidos:</p>
+                    <div className={styles.links}>
+                        <p className={styles.title}>Links Rápidos:</p>
                         <a target="_blank" href="/">
-                            Departamento Acadêmico de Ciencia da Computação - DACC
+                            Departamento Acadêmico de Ciencia da Computação -
+                            DACC
                         </a>
                         <a target="_blank" href="/">
                             EventBrite - Descubra eventos
                         </a>
                     </div>
-                    <div className="copyright">
-                        <p className="title">Desenvolvido por:</p>
+                    <div className={styles.copyright}>
+                        <p className={styles.title}>Desenvolvido por:</p>
                         <p>
                             Alunos formandos do curso de Bacharelado em Ciência
                             da Computação da UNIR.
                         </p>
-                        <div className="pessoa">
+                        <div className={styles.pessoa}>
                             <img
                                 src="https://avatars.githubusercontent.com/u/61695553?v=4"
                                 alt="foto de uma pessoa"
@@ -50,7 +51,7 @@ export default function Footer() {
                                 João Pedro N. Silveira
                             </a>
                         </div>
-                        <div className="pessoa">
+                        <div className={styles.pessoa}>
                             <img
                                 src="https://media.licdn.com/dms/image/D5603AQFWcCtsgPW2GA/profile-displayphoto-shrink_800_800/0/1668519470518?e=1689206400&v=beta&t=6f799cuE9zueLqmNC5XaYjLXoqBnu4XYRYjX6yMQYP4"
                                 alt="foto de uma pessoa"

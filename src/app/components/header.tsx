@@ -15,13 +15,13 @@ export default function Header() {
                         <Image
                             src={Logo}
                             alt="Logo semana da computação"
-                            width={400}
+                            width={325}
                         />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
+                            <Nav.Link href="#inicio">Início</Nav.Link>
                             <Nav.Link href="#sobre">Sobre</Nav.Link>
                             <Nav.Link href="#palestras">Palestras</Nav.Link>
                             <Nav.Link href="#minicursos">Minicursos</Nav.Link>
