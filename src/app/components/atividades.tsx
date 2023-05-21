@@ -10,7 +10,18 @@ interface Props {
     link: string;
 }
 
+async function getAtividades() {
+    const res = await fetch(`/api/db`, { cache: "no-store" });
+    const projects = await res.json();
+    console.log(projects);
+
+    return projects;
+}
+
 export default function Atividades(props: Props) {
+
+    const a = getAtividades();
+
     return (
         <div className={styles.atividades}>
             <div className={styles.conteudo}>
@@ -23,40 +34,29 @@ export default function Atividades(props: Props) {
                                 First slide label
                             </p>
                             <p className={styles.palestrante}>Nome do caba</p>
-                            <p className={styles.descricao}>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Deleniti, cum. Quos maiores
-                                error pariatur, explicabo minus harum officia ab
-                                quae cum totam repellendus exercitationem.
-                                Necessitatibus accusantium doloribus
-                                voluptatibus aut mollitia, quo, porro asperiores
-                                odit eaque cumque provident impedit illo velit
-                                enim officia quasi eligendi vel tempora ea nemo
-                                illum totam maxime minima consequatur. Sunt
-                                dolores cumque odio, sequi quas nesciunt harum,
-                                maiores minima libero expedita neque quasi
-                                excepturi nam. Quisquam facilis vero totam in
-                                atque recusandae, modi quas culpa provident
-                                voluptate quis blanditiis eaque nostrum dicta
-                                natus eveniet architecto magni dolore qui
-                                officia accusantium. Debitis aliquid in omnis
-                                molestias numquam.
-                            </p>
-                            <p className={styles.datahora}>
-                                dia 27 de jun às 10:30h
-                            </p>
-                        </div>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <Image className={styles.img} src={palestra1} alt="" />
-                        <div className={styles.caption}>
-                            <p className={styles.legenda_title}>Firasdasdas</p>
-                            <p>
-                                Nulla vitae elit libero, a pharetra augue mollis
-                                interasdasdadasasdsdollis interdum.Nulla vitae
-                                elit libero, a pharetra augue mollis
-                                interdum.Nulla vitae elit libero
-                            </p>
+                            <div className={styles.decricao_content}>
+                                <p className={styles.descricao}>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Repellendus id suscipit,
+                                    quae debitis, possimus facere accusamus
+                                    animi dignissimos saepe quas maxime error,
+                                    ut voluptates in beatae? Incidunt quia
+                                    explicabo, sequi quo ratione ipsam corporis
+                                    nemo porro perferendis, minus neque officiis
+                                    voluptas eligendi dolore ab atque.
+                                    Cupiditate, ad voluptates, unde earum
+                                    exercitationem ut enim aliquam iusto quaerat
+                                    velit dolor cum facilis atque quia culpa
+                                    nam, nostrum quibusdam sunt. Praesentium,
+                                    eligendi excepturi nobis neque, facere earum
+                                    dolores voluptates provident fugiat
+                                    exercitationem deleniti corporis laborum
+                                    distinctio debitis in magnam dignissimos
+                                    culpa nisi vitae cumque perspiciatis? Animi
+                                    cumque ratione nesciunt? Atque modi
+                                    accusamus dicta.
+                                </p>
+                            </div>
                             <p className={styles.datahora}>
                                 dia 27 de jun às 10:30h
                             </p>
