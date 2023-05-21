@@ -25,6 +25,7 @@
 }
 
 .copyright {
+    margin-left: 20px;
     width: 30%;
 }
 
@@ -43,7 +44,7 @@
 }
 
 .copyright p {
-    width: 110%;
+    width: 100%;
 }
 
 .pessoa {
@@ -66,6 +67,10 @@
     .links,
     .copyright {
         width: auto;
+    }
+
+    .copyright{
+        margin-left: auto;
     }
 
     .links {
