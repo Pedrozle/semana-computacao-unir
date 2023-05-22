@@ -50,7 +50,7 @@ export default function Sobre() {
                 <div className={styles.galeria}>
                     <div className={styles.foto}>
                         <Image className={styles.img} src={galery1} alt="" />
-                        <p>1º dia da semana da computação</p>
+                        <p>1º dia da V semana da computação</p>
                     </div>
                     <div className={styles.foto}>
                         <Image className={styles.img} src={galery2} alt="" />

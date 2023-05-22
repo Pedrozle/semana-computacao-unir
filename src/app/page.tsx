@@ -1,3 +1,4 @@
+"use client";
 import Banner from "@/app/components/banner";
 import Sobre from "@/app/components/sobre";
 import Onde from "./components/onde";
@@ -13,11 +14,11 @@ export default function Page() {
             <Sobre></Sobre>
             <Onde></Onde>
             <MiddleBanner></MiddleBanner>
-            <Atividades title="Palestras" link=""></Atividades>
+            <Atividades title="Palestras" link="palestras"></Atividades>
             <MiddleBanner></MiddleBanner>
-            <Atividades title="Minicursos" link=""></Atividades>
+            <Atividades title="Minicursos" link="minicursos"></Atividades>
             <Galeria></Galeria>
-            <Atividades title="Trabalhos" link=""></Atividades>
+            <Atividades title="Trabalhos" link="trabalhos"></Atividades>
             <Comissao></Comissao>
         </main>
     );
