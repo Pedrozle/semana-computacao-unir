@@ -16,6 +16,7 @@ interface Atividade {
     palestrante: string;
     descricao: string;
     data: string;
+    img: string;
 }
 
 async function getAtividades(link: string) {
@@ -25,12 +26,42 @@ async function getAtividades(link: string) {
         next: { revalidate: 500 },
     });
 
-    const palestras: Array<Atividade> = await res.json();
+    let palestras: Array<Atividade> = await res.json();
 
-    palestras;
+    palestras = palestras.map((palestra: Atividade) => {
+
+        let blob = base64ToBlob(palestra.img)
+
+        return {
+            titulo: palestra.titulo,
+            palestrante: palestra.palestrante,
+            descricao: palestra.descricao,
+            data: palestra.data,
+            img: URL.createObjectURL(blob)
+        };
+    });
 
     return palestras;
 }
+
+function base64ToBlob(base64String: any) {
+    const byteCharacters = atob(base64String.split(",")[1]);
+    const byteArrays = [];
+
+    for (let offset = 0; offset < byteCharacters.length; offset += 1024) {
+      const slice = byteCharacters.slice(offset, offset + 1024);
+      const byteNumbers = new Array(slice.length);
+
+      for (let i = 0; i < slice.length; i++) {
+        byteNumbers[i] = slice.charCodeAt(i);
+      }
+
+      const byteArray = new Uint8Array(byteNumbers);
+      byteArrays.push(byteArray);
+    }
+
+    return new Blob(byteArrays, { type: "image/jpeg" });
+  }
 
 export default function Atividades(props: Props) {
     const [atividades, setAtividades] = useState<Atividade[]>([]);
@@ -54,7 +85,7 @@ export default function Atividades(props: Props) {
                         <Carousel.Item>
                             <Image
                                 className={styles.img}
-                                src={palestra1}
+                                src={atividade.img}
                                 alt=""
                             />
                             <div className={styles.caption}>

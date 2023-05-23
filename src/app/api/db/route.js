@@ -5,13 +5,10 @@ export async function GET(req, res) {
     let colecao = req.url.split("?")[1].split("=")[1];
     console.log(colecao);
 
-    const client = new MongoClient(
-        `mongodb+srv://pedrozle:7jaBI5gvZ0WZnoXK@cluster0.kunsu4f.mongodb.net/`,
-        {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        }
-    );
+    const client = new MongoClient(`${process.env.DATABASE_URL}`, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    });
     await client.connect();
 
     // Acesso ao banco de dados
