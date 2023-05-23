@@ -1,6 +1,6 @@
 @import './../variables.scss';
 
-.comissao {
+.pessoal {
     background-color: $cinza-bem-mais-escuro;
     color: white;
 }
@@ -21,9 +21,13 @@
 .pessoas {
     display: flex;
     justify-content: space-between;
+    width: 80vw;
 }
 
 .pessoa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
     margin-right: 20px;
 
