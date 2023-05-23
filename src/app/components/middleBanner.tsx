@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 export default function MiddleBanner() {
     return (
         <div className={styles.middle_banner}>
-            <div className={`${styles.conteudo} ${styles.divider}`}>
+            <div className={`${styles.conteudo} divider`}>
                 <p className={styles.title}>
                     Inscreva-se para a Semana da Computação
                 </p>

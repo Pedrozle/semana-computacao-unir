@@ -5,7 +5,7 @@ import Onde from "./components/onde";
 import MiddleBanner from "./components/middleBanner";
 import Atividades from "./components/atividades";
 import Galeria from "./components/galeria";
-import Comissao from "./components/comissao";
+import Pessoal from "./components/pessoal";
 
 export default function Page() {
     return (
@@ -19,7 +19,16 @@ export default function Page() {
             <Atividades title="Minicursos" link="minicursos"></Atividades>
             <Galeria></Galeria>
             <Atividades title="Trabalhos" link="trabalhos"></Atividades>
-            <Comissao></Comissao>
+            <Pessoal
+                titulo="Comissão Organizadora"
+                descricao="As pessoas que ajudaram a tornar isso possível"
+                link="comissao"
+            ></Pessoal>
+            <Pessoal
+                titulo="Patrocinadores"
+                descricao="Patrocinadores que contribuíram para o evento"
+                link="patrocinadores"
+            ></Pessoal>
         </main>
     );
 }

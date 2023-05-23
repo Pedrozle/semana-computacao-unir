@@ -9,3 +9,21 @@ body {
     color: white;
     margin: 0;
 }
+
+
+.divider::before {
+    margin-bottom: 50px;
+}
+
+.divider::after {
+    margin-top: 75px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #cecece5e;
+    width: 60%;
+    border-radius: 20px;
+}
