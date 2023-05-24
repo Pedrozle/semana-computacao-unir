@@ -77,17 +77,19 @@ export default function Atividades(props: Props) {
     }, []); // Certifique-se de fornecer um array vazio para o useEffect para que ele seja executado apenas uma vez
 
     return (
-        <div className={styles.atividades}>
+        <div id={props.title.toLowerCase()} className={styles.atividades}>
             <div className={styles.conteudo}>
                 <p className={styles.title}>{props.title}</p>
                 <Carousel>
                     {atividades.map((atividade: Atividade, index: number) => (
                         <Carousel.Item>
-                            <Image
-                                className={styles.img}
-                                src={atividade.img}
-                                alt=""
-                            />
+                            <div className={styles.mask}>
+                                <img
+                                    src={atividade.img}
+                                    alt=""
+                                    className={styles.img}
+                                />
+                            </div>
                             <div className={styles.caption}>
                                 <p className={styles.legenda_title}>
                                     {atividade.titulo}
@@ -95,14 +97,14 @@ export default function Atividades(props: Props) {
                                 <p className={styles.palestrante}>
                                     {atividade.palestrante}
                                 </p>
+                                <p className={styles.datahora}>
+                                    {atividade.data}
+                                </p>
                                 <div className={styles.decricao_content}>
                                     <p className={styles.descricao}>
                                         {atividade.descricao}
                                     </p>
                                 </div>
-                                <p className={styles.datahora}>
-                                    {atividade.data}
-                                </p>
                             </div>
                         </Carousel.Item>
                     ))}
