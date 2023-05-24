@@ -26,22 +26,23 @@ async function getAtividades(link: string) {
         next: { revalidate: 500 },
     });
 
-    let palestras: Array<Atividade> = await res.json();
+    let atividades: Array<Atividade> = await res.json();
 
-    palestras = palestras.map((palestra: Atividade) => {
-
-        let blob = base64ToBlob(palestra.img)
+    atividades = atividades.map((atividade: Atividade) => {
+        let blob: Blob = atividade.img
+            ? base64ToBlob(atividade.img)
+            : new Blob();
 
         return {
-            titulo: palestra.titulo,
-            palestrante: palestra.palestrante,
-            descricao: palestra.descricao,
-            data: palestra.data,
-            img: URL.createObjectURL(blob)
+            titulo: atividade.titulo,
+            palestrante: atividade.palestrante,
+            descricao: atividade.descricao,
+            data: atividade.data,
+            img: atividade.img ? URL.createObjectURL(blob) : "",
         };
     });
 
-    return palestras;
+    return atividades;
 }
 
 function base64ToBlob(base64String: any) {
@@ -49,19 +50,19 @@ function base64ToBlob(base64String: any) {
     const byteArrays = [];
 
     for (let offset = 0; offset < byteCharacters.length; offset += 1024) {
-      const slice = byteCharacters.slice(offset, offset + 1024);
-      const byteNumbers = new Array(slice.length);
+        const slice = byteCharacters.slice(offset, offset + 1024);
+        const byteNumbers = new Array(slice.length);
 
-      for (let i = 0; i < slice.length; i++) {
-        byteNumbers[i] = slice.charCodeAt(i);
-      }
+        for (let i = 0; i < slice.length; i++) {
+            byteNumbers[i] = slice.charCodeAt(i);
+        }
 
-      const byteArray = new Uint8Array(byteNumbers);
-      byteArrays.push(byteArray);
+        const byteArray = new Uint8Array(byteNumbers);
+        byteArrays.push(byteArray);
     }
 
     return new Blob(byteArrays, { type: "image/jpeg" });
-  }
+}
 
 export default function Atividades(props: Props) {
     const [atividades, setAtividades] = useState<Atividade[]>([]);
