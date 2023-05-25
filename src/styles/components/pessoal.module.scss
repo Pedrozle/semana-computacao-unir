@@ -34,15 +34,22 @@
     width: 80vw;
 }
 
-.equipe{
+.equipe {
     margin: 5px;
 }
 
-.equipe_pessoal{
-    display: flex;
-    align-items: center;
+.equipe_pessoal {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
     justify-content: center;
-    
+}
+
+.nome{
+    font-weight: bold;
+    text-decoration: underline;
+    color: $azul;
 }
 
 .pessoa {
@@ -70,7 +77,8 @@
     .subtitle {
         font-size: 1.1em
     }
-    .equipe_pessoal{
+
+    .equipe_pessoal {
         flex-direction: column;
     }
 }

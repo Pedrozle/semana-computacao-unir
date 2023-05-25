@@ -1,4 +1,5 @@
 "use client";
+import base64ToBlob from "@/services/fotoConversor";
 import styles from "@/styles/components/pessoal.module.scss";
 import { useEffect, useState } from "react";
 
@@ -22,7 +23,22 @@ async function getPessoal(link: string) {
         next: { revalidate: 500 },
     });
 
-    const pessoal: Array<Pessoal> = await res.json();
+    let pessoal: Array<Pessoal> = await res.json();
+
+    pessoal = pessoal.map((pessoa: Pessoal) => {
+        let blob: Blob = pessoa.img.includes("data=")
+            ? base64ToBlob(pessoa.img)
+            : new Blob();
+        return {
+            nome: pessoa.nome,
+            descricao: pessoa.descricao,
+            equipe: pessoa.equipe,
+            img:
+                blob.type === "image/jpeg"
+                    ? URL.createObjectURL(blob)
+                    : pessoa.img,
+        };
+    });
 
     return pessoal;
 }
@@ -72,14 +88,15 @@ export default function Pessoal(props: Props) {
                                                                 width="50"
                                                             />
                                                             <div>
-                                                                <a
-                                                                    target="_blank"
-                                                                    href="https://www.linkedin.com/in/thania-pereira/"
+                                                                <p
+                                                                    className={
+                                                                        styles.nome
+                                                                    }
                                                                 >
                                                                     {
                                                                         pessoa.nome
                                                                     }
-                                                                </a>
+                                                                </p>
                                                                 <p>
                                                                     {
                                                                         pessoa.descricao
@@ -117,14 +134,15 @@ export default function Pessoal(props: Props) {
                                                                 width="50"
                                                             />
                                                             <div>
-                                                                <a
-                                                                    target="_blank"
-                                                                    href="https://www.linkedin.com/in/thania-pereira/"
+                                                                <p
+                                                                    className={
+                                                                        styles.nome
+                                                                    }
                                                                 >
                                                                     {
                                                                         pessoa.nome
                                                                     }
-                                                                </a>
+                                                                </p>
                                                                 <p>
                                                                     {
                                                                         pessoa.descricao

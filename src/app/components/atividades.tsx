@@ -2,6 +2,7 @@
 import styles from "@/styles/components/atividades.module.scss";
 import Image from "next/image";
 import Carousel from "react-bootstrap/Carousel";
+import base64ToBlob from '@/services/fotoConversor'
 
 import palestra1 from "@/assets/palestrante1.jpg";
 import { useEffect, useState } from "react";
@@ -43,25 +44,6 @@ async function getAtividades(link: string) {
     });
 
     return atividades;
-}
-
-function base64ToBlob(base64String: any) {
-    const byteCharacters = atob(base64String.split(",")[1]);
-    const byteArrays = [];
-
-    for (let offset = 0; offset < byteCharacters.length; offset += 1024) {
-        const slice = byteCharacters.slice(offset, offset + 1024);
-        const byteNumbers = new Array(slice.length);
-
-        for (let i = 0; i < slice.length; i++) {
-            byteNumbers[i] = slice.charCodeAt(i);
-        }
-
-        const byteArray = new Uint8Array(byteNumbers);
-        byteArrays.push(byteArray);
-    }
-
-    return new Blob(byteArrays, { type: "image/jpeg" });
 }
 
 export default function Atividades(props: Props) {
