@@ -92,7 +92,7 @@ export default function Atividades(props: Props) {
                             <Carousel>
                                 {atividades.map(
                                     (atividade: Atividade, index: number) => (
-                                        <Carousel.Item>
+                                        <Carousel.Item key={index}>
                                             <div className={styles.mask}>
                                                 <img
                                                     src={atividade.img}
