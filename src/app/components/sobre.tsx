@@ -49,11 +49,11 @@ export default function Sobre() {
                 </div>
                 <div className={styles.galeria}>
                     <div className={styles.foto}>
-                        <Image className={styles.img} src={galery1} alt="" />
+                        <Image className={styles.img} src={galery2} alt="" />
                         <p>1º dia da V semana da computação</p>
                     </div>
                     <div className={styles.foto}>
-                        <Image className={styles.img} src={galery2} alt="" />
+                        <Image className={styles.img} src={galery1} alt="" />
                         <p>Palestra sobre Biomedicina</p>
                     </div>
                 </div>

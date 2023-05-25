@@ -18,10 +18,31 @@
     font-size: 2em;
 }
 
+.subtitle {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
 .pessoas {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: 80vw;
+}
+
+.equipe{
+    margin: 5px;
+}
+
+.equipe_pessoal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .pessoa {
@@ -44,5 +65,12 @@
 
     .title {
         font-size: 1.2em;
+    }
+
+    .subtitle {
+        font-size: 1.1em
+    }
+    .equipe_pessoal{
+        flex-direction: column;
     }
 }

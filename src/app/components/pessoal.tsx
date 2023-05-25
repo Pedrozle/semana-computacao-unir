@@ -12,6 +12,7 @@ interface Pessoal {
     nome: string;
     descricao: string;
     img: string;
+    equipe: number;
 }
 
 async function getPessoal(link: string) {
@@ -50,24 +51,95 @@ export default function Pessoal(props: Props) {
                             <p className={styles.title}>{props.titulo}</p>
                             <p>{props.descricao}</p>
                             <div className={styles.pessoas}>
-                                {pessoal.map((pessoa, index) => (
-                                    <div className={styles.pessoa} key={index}>
-                                        <img
-                                            src="https://avatars.githubusercontent.com/u/61695553?v=4"
-                                            alt="foto de uma pessoa"
-                                            width="50"
-                                        />
-                                        <div>
-                                            <a
-                                                target="_blank"
-                                                href="https://www.linkedin.com/in/thania-pereira/"
-                                            >
-                                                {pessoa.nome}
-                                            </a>
-                                            <p>{pessoa.descricao}</p>
-                                        </div>
+                                <div className={styles.equipe}>
+                                    <p className={styles.subtitle}>
+                                        Coordenação
+                                    </p>
+                                    <div className={styles.equipe_pessoal}>
+                                        {pessoal.map((pessoa, index) => (
+                                            <>
+                                                {pessoa.equipe == 1 ? (
+                                                    <>
+                                                        <div
+                                                            className={
+                                                                styles.pessoa
+                                                            }
+                                                            key={index}
+                                                        >
+                                                            <img
+                                                                src={pessoa.img}
+                                                                alt="foto de uma pessoa"
+                                                                width="50"
+                                                            />
+                                                            <div>
+                                                                <a
+                                                                    target="_blank"
+                                                                    href="https://www.linkedin.com/in/thania-pereira/"
+                                                                >
+                                                                    {
+                                                                        pessoa.nome
+                                                                    }
+                                                                </a>
+                                                                <p>
+                                                                    {
+                                                                        pessoa.descricao
+                                                                    }
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </>
+                                                ) : (
+                                                    <></>
+                                                )}
+                                            </>
+                                        ))}
                                     </div>
-                                ))}
+                                </div>
+                                <div className={styles.equipe}>
+                                    <p className={styles.subtitle}>
+                                        Equipe técnica
+                                    </p>
+
+                                    <div className={styles.equipe_pessoal}>
+                                        {pessoal.map((pessoa, index) => (
+                                            <>
+                                                {pessoa.equipe == 2 ? (
+                                                    <>
+                                                        <div
+                                                            className={
+                                                                styles.pessoa
+                                                            }
+                                                            key={index}
+                                                        >
+                                                            <img
+                                                                src={pessoa.img}
+                                                                alt="foto de uma pessoa"
+                                                                width="50"
+                                                            />
+                                                            <div>
+                                                                <a
+                                                                    target="_blank"
+                                                                    href="https://www.linkedin.com/in/thania-pereira/"
+                                                                >
+                                                                    {
+                                                                        pessoa.nome
+                                                                    }
+                                                                </a>
+                                                                <p>
+                                                                    {
+                                                                        pessoa.descricao
+                                                                    }
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </>
+                                                ) : (
+                                                    <></>
+                                                )}
+                                            </>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
