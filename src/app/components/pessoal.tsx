@@ -58,109 +58,173 @@ export default function Pessoal(props: Props) {
 
     return (
         <>
-            {pessoal.length == 0 ? (
-                <></>
-            ) : (
+            {props.link === "comissao" ? (
                 <>
-                    <div className={styles.pessoal}>
-                        <div className={`${styles.conteudo} divider`}>
-                            <p className={styles.title}>{props.titulo}</p>
-                            <p>{props.descricao}</p>
-                            <div className={styles.pessoas}>
-                                <div className={styles.equipe}>
-                                    <p className={styles.subtitle}>
-                                        Coordenação
+                    {pessoal.length == 0 ? (
+                        <></>
+                    ) : (
+                        <>
+                            <div className={styles.pessoal}>
+                                <div className={`${styles.conteudo} divider`}>
+                                    <p className={styles.title}>
+                                        {props.titulo}
                                     </p>
-                                    <div className={styles.equipe_pessoal}>
-                                        {pessoal.map((pessoa, index) => (
-                                            <>
-                                                {pessoa.equipe == 1 ? (
-                                                    <>
-                                                        <div
-                                                            className={
-                                                                styles.pessoa
-                                                            }
-                                                            key={index}
-                                                        >
-                                                            <img
-                                                                src={pessoa.img}
-                                                                alt="foto de uma pessoa"
-                                                                width="50"
-                                                            />
-                                                            <div>
-                                                                <p
-                                                                    className={
-                                                                        styles.nome
-                                                                    }
-                                                                >
-                                                                    {
-                                                                        pessoa.nome
-                                                                    }
-                                                                </p>
-                                                                <p>
-                                                                    {
-                                                                        pessoa.descricao
-                                                                    }
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </>
-                                                ) : (
-                                                    <></>
+                                    <p>{props.descricao}</p>
+                                    <div className={styles.pessoas}>
+                                        <div className={styles.equipe}>
+                                            <p className={styles.subtitle}>
+                                                Coordenação
+                                            </p>
+                                            <div
+                                                className={
+                                                    styles.equipe_pessoal
+                                                }
+                                            >
+                                                {pessoal.map(
+                                                    (pessoa, index) => (
+                                                        <>
+                                                            {pessoa.equipe ==
+                                                            1 ? (
+                                                                <>
+                                                                    <div
+                                                                        className={
+                                                                            styles.pessoa
+                                                                        }
+                                                                        key={
+                                                                            index
+                                                                        }
+                                                                    >
+                                                                        <img
+                                                                            src={
+                                                                                pessoa.img
+                                                                            }
+                                                                            alt="foto de uma pessoa"
+                                                                            width="50"
+                                                                        />
+                                                                        <div>
+                                                                            <p
+                                                                                className={
+                                                                                    styles.nome
+                                                                                }
+                                                                            >
+                                                                                {
+                                                                                    pessoa.nome
+                                                                                }
+                                                                            </p>
+                                                                            <p>
+                                                                                {
+                                                                                    pessoa.descricao
+                                                                                }
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </>
+                                                            ) : (
+                                                                <></>
+                                                            )}
+                                                        </>
+                                                    )
                                                 )}
-                                            </>
-                                        ))}
+                                            </div>
+                                        </div>
+                                        <div className={styles.equipe}>
+                                            <p className={styles.subtitle}>
+                                                Equipe técnica
+                                            </p>
+
+                                            <div
+                                                className={
+                                                    styles.equipe_pessoal
+                                                }
+                                            >
+                                                {pessoal.map(
+                                                    (pessoa, index) => (
+                                                        <>
+                                                            {pessoa.equipe ==
+                                                            2 ? (
+                                                                <>
+                                                                    <div
+                                                                        className={
+                                                                            styles.pessoa
+                                                                        }
+                                                                        key={
+                                                                            index
+                                                                        }
+                                                                    >
+                                                                        <img
+                                                                            src={
+                                                                                pessoa.img
+                                                                            }
+                                                                            alt="foto de uma pessoa"
+                                                                            width="50"
+                                                                        />
+                                                                        <div>
+                                                                            <p
+                                                                                className={
+                                                                                    styles.nome
+                                                                                }
+                                                                            >
+                                                                                {
+                                                                                    pessoa.nome
+                                                                                }
+                                                                            </p>
+                                                                            <p>
+                                                                                {
+                                                                                    pessoa.descricao
+                                                                                }
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </>
+                                                            ) : (
+                                                                <></>
+                                                            )}
+                                                        </>
+                                                    )
+                                                )}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className={styles.equipe}>
-                                    <p className={styles.subtitle}>
-                                        Equipe técnica
+                            </div>
+                        </>
+                    )}
+                </>
+            ) : (
+                <>
+                    {pessoal.length == 0 ? (
+                        <></>
+                    ) : (
+                        <>
+                            <div className={styles.pessoal}>
+                                <div className={`${styles.conteudo} divider`}>
+                                    <p className={styles.title}>
+                                        {props.titulo}
                                     </p>
-
-                                    <div className={styles.equipe_pessoal}>
+                                    <p>{props.descricao}</p>
+                                    <div className={styles.empresas}>
                                         {pessoal.map((pessoa, index) => (
-                                            <>
-                                                {pessoa.equipe == 2 ? (
-                                                    <>
-                                                        <div
-                                                            className={
-                                                                styles.pessoa
-                                                            }
-                                                            key={index}
-                                                        >
-                                                            <img
-                                                                src={pessoa.img}
-                                                                alt="foto de uma pessoa"
-                                                                width="50"
-                                                            />
-                                                            <div>
-                                                                <p
-                                                                    className={
-                                                                        styles.nome
-                                                                    }
-                                                                >
-                                                                    {
-                                                                        pessoa.nome
-                                                                    }
-                                                                </p>
-                                                                <p>
-                                                                    {
-                                                                        pessoa.descricao
-                                                                    }
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </>
-                                                ) : (
-                                                    <></>
-                                                )}
-                                            </>
+                                            <div
+                                                className={styles.pessoa}
+                                                key={index}
+                                            >
+                                                <img
+                                                    src={pessoa.img}
+                                                    alt="foto de uma pessoa"
+                                                    width="50"
+                                                />
+                                                <div>
+                                                    <p className={styles.titulo_empresa}>
+                                                        {pessoa.nome}
+                                                    </p>
+                                                </div>
+                                            </div>
                                         ))}
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </>
+                    )}
                 </>
             )}
         </>

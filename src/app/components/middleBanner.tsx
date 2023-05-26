@@ -13,7 +13,7 @@ export default function MiddleBanner() {
                     <Button
                         variant="primary"
                         onClick={() =>
-                            (window.location.href = "https://google.com")
+                            (window.location.href = "https://www.eventbrite.com/e/vi-semana-da-computacao-tickets-629344154307")
                         }
                     >
                         Quero Participar!

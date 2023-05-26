@@ -30,7 +30,7 @@ export default function Header() {
                                 variant="primary"
                                 onClick={() =>
                                     (window.location.href =
-                                        "https://google.com")
+                                        "https://www.eventbrite.com/e/vi-semana-da-computacao-tickets-629344154307")
                                 }
                             >
                                 Inscreva-se!
