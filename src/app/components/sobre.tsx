@@ -10,29 +10,23 @@ export default function Sobre() {
                 <div className={styles.descricao}>
                     <div className={styles.texto}>
                         <p>
-                            É um evento aberto a toda comunidade regional e de
-                            outros centros, procurando congregar estudantes de
+                            A SEMANA DA COMPUTAÇÃO DA UNIR, antigamente
+                            denominada INFOUNIR (Semana de Informática), é um
+                            evento aberto a toda comunidade regional e de outros
+                            centros, procurando congregar estudantes de
                             graduação e pós-graduação, professores,
                             pesquisadores, profissionais e demais interessados
                             em computação, objetivando a difusão da computação e
                             do seu bom uso, trazendo para o debate aberto, temas
-                            importantes relacionados à Ciência da Computação.
+                            importantes relacionados à Ciência de Dados e Big
+                            data.
                         </p>
                         <p>
-                            Além de propiciar uma troca de experiência, o
-                            objetivo também é gerar um ambiente para atualização
-                            tecnológica através de atividades complementares
-                            como palestras, debates e minicursos.
-                        </p>
-                        <p>
-                            Também haverá apresentação de trabalhos acadêmicos
-                            desenvolvidos pelos alunos do curso de Ciência da
-                            Computação da Unir, a fim de divulgar à comunidade
-                            as pesquisas desenvolvidas nesta temática pelos
-                            alunos e professores. As inscrições são limitadas
-                            para as atividades e é necessário que o participante
-                            escolha e se inscreva na(s) atividade(s) que irá
-                            participar.
+                            Nesta edição, o evento será integrado ao Workshop de
+                            Tecnologias de Redes do PoP-RO, voltado para
+                            gestores e equipes técnicas da área de TIC das
+                            principais instituições públicas e privadas de
+                            ensino e pesquisa do estado de Rondônia.
                         </p>
                     </div>
                     <div className={styles.foto}>
