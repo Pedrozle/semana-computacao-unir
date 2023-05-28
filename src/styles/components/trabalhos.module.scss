@@ -29,15 +29,17 @@
 .areas_submissao {
     display: flex;
     justify-content: space-between;
+    margin-top: 50px;
 }
 
 .img {
-
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     img {
         border-radius: 50%;
-        width: 80%;
+        width: 42%;
         height: auto;
     }
 
@@ -72,7 +74,7 @@
 }
 
 .button {
-    margin-top: 20px;
+    margin-top: 50px;
     padding: 20px;
     font-size: 1.3em;
     border-radius: 50px;

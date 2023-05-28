@@ -1,7 +1,7 @@
 "use client";
 import styles from "@/styles/components/atividades.module.scss";
 import Carousel from "react-bootstrap/Carousel";
-import base64ToBlob from '@/services/fotoConversor'
+import base64ToBlob from "@/services/fotoConversor";
 
 import { useEffect, useState } from "react";
 
@@ -74,11 +74,27 @@ export default function Atividades(props: Props) {
                                     (atividade: Atividade, index: number) => (
                                         <Carousel.Item key={index}>
                                             <div className={styles.mask}>
-                                                <img
-                                                    src={atividade.img}
-                                                    alt=""
-                                                    className={styles.img}
-                                                />
+                                                {atividade.img.length > 0 ? (
+                                                    <>
+                                                        <img
+                                                            src={atividade.img}
+                                                            alt=""
+                                                            className={
+                                                                styles.img
+                                                            }
+                                                        />
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <img
+                                                            src="https://placehold.co/600x400"
+                                                            alt=""
+                                                            className={
+                                                                styles.img
+                                                            }
+                                                        />
+                                                    </>
+                                                )}
                                             </div>
                                             <div className={styles.caption}>
                                                 <p

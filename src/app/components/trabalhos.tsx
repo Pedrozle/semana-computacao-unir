@@ -19,13 +19,6 @@ export default function Trabalhos() {
                         estão disponíveis no site do evento.
                     </p>
                     <div className={styles.areas_submissao}>
-                        <div className={styles.img}>
-                            <Image src={explica} alt="" />
-                            <p>
-                                Apresentação de trabalho pelo acadêmico Aden
-                                Hercules na V Semana da Computação
-                            </p>
-                        </div>
                         <div className={styles.area}>
                             <p className={styles.subtitle}>Áreas de submissão</p>
                             <p>
@@ -50,6 +43,13 @@ export default function Trabalhos() {
                                 <li>Software Educacional </li>
                                 <li>Programação para dispositivos móveis</li>
                             </ul>
+                        </div>
+                        <div className={styles.img}>
+                            <Image src={explica} alt="" />
+                            <p>
+                                Apresentação de trabalho pelo acadêmico Aden
+                                Hercules na V Semana da Computação
+                            </p>
                         </div>
                     </div>
                 </div>
