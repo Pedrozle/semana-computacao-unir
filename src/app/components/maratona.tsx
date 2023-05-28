@@ -18,7 +18,7 @@ export default function Maratona() {
                         fechados de pessoas que visa ampliar a capacidade de
                         raciocínio e de resolução de problemas de computador em
                         um tempo determinado. Além de proporcionar a simulação
-                        do ambiente competitivo "Maratona de Programação " da
+                        do ambiente competitivo &quot;Maratona de Programação&quot; da
                         SBC.
                     </p>
                     <Image className={styles.img} src={computador} alt=""/>
