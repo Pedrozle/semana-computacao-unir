@@ -12,16 +12,16 @@ export default function Banner() {
                 </p>
                 <p className={styles.data}>26 à 30 jun. 2023</p>
                 <div className={styles.botao_info}>
-                <Button
-                    className={styles.button}
-                    variant="primary"
-                    onClick={() =>
-                        (window.location.href =
-                            "https://www.eventbrite.com.br/e/vi-semana-da-computacao-tickets-643466023197")
-                    }
-                >
-                    Inscreva-se!
-                </Button>
+                    <Button
+                        className={styles.button}
+                        variant="primary"
+                        onClick={() =>
+                            (window.location.href =
+                                "https://www.eventbrite.com.br/e/vi-semana-da-computacao-tickets-643466023197")
+                        }
+                    >
+                        Inscreva-se!
+                    </Button>
                 </div>
             </div>
         </div>

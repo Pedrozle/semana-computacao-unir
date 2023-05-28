@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "@/styles/components/sobre.module.scss";
-import primeiro_dia from "@/assets/primeiro_dia.jpeg";
+import primeiro_dia from "@/assets/img/primeiro_dia.jpeg";
 
 export default function Sobre() {
     return (

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,700;1,500&family=Kalam:wght@700&family=Montserrat:wght@100;400;700&family=Nova+Mono&family=Ysabeau:ital,wght@0,1;0,400;0,800;1,1&display=swap');
 @import './variables.scss';
+@import "./../assets/fonts/Latica/Regular.ttf";
 
 body {
     font-family: 'Alegreya Sans SC', sans-serif;
@@ -7,6 +8,7 @@ body {
     font-family: 'Nova Mono', monospace;
     font-family: 'Ysabeau', sans-serif;
     font-family: "Montserrat", sans-serif;
+    font-family: "Latica", sans-serif;
     background-color: $cinza-bem-mais-escuro;
     color: white;
     margin: 0;

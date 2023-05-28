@@ -3,7 +3,7 @@ import styles from "@/styles/components/maratona.module.scss";
 import Image from "next/image";
 import { Button } from "react-bootstrap";
 
-import computador from "@/assets/startup.png"
+import computador from "@/assets/img/startup.png"
 
 export default function Maratona() {
     return (

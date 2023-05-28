@@ -1,7 +1,7 @@
 @import './../variables.scss';
 
 .inicio {
-    background-image: url(./../../assets/banner.png);
+    background-image: url(./../../assets/img/banner.png);
     background-position: center;
     background-repeat: repeat;
     transition: 0.7s;
@@ -31,7 +31,7 @@
     font-weight: bold;
     font-size: 3em;
     margin-bottom: 50px;
-    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: 'Kalam', cursive;
 }
 
 .descricao {

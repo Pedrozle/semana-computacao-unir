@@ -2,7 +2,7 @@ import styles from "@/styles/components/trabalhos.module.scss";
 import Image from "next/image";
 import { Button } from "react-bootstrap";
 
-import explica from "@/assets/explica.png"
+import explica from "@/assets/img/explica.png"
 
 export default function Trabalhos() {
     return (
