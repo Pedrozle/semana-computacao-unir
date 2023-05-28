@@ -1,10 +1,8 @@
 "use client";
 import styles from "@/styles/components/atividades.module.scss";
-import Image from "next/image";
 import Carousel from "react-bootstrap/Carousel";
 import base64ToBlob from '@/services/fotoConversor'
 
-import palestra1 from "@/assets/palestrante1.jpg";
 import { useEffect, useState } from "react";
 
 interface Props {

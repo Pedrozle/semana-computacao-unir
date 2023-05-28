@@ -6,29 +6,32 @@ import MiddleBanner from "./components/middleBanner";
 import Atividades from "./components/atividades";
 import Galeria from "./components/galeria";
 import Pessoal from "./components/pessoal";
+import Trabalhos from "./components/trabalhos";
+import Maratona from "./components/maratona";
 
 export default function Page() {
     return (
         <main>
-            <Banner></Banner>
-            <Sobre></Sobre>
-            <Onde></Onde>
-            <MiddleBanner></MiddleBanner>
-            <Atividades title="Palestras" link="palestras"></Atividades>
-            <MiddleBanner></MiddleBanner>
-            <Atividades title="Minicursos" link="minicursos"></Atividades>
-            <Galeria></Galeria>
-            <Atividades title="Trabalhos" link="trabalhos"></Atividades>
+            <Banner />
+            <Sobre />
+            <Onde />
+            <MiddleBanner />
+            <Atividades title="Palestras" link="palestras" />
+            <MiddleBanner />
+            <Atividades title="Minicursos" link="minicursos" />
+            <Galeria />
+            <Trabalhos />
+            <Maratona />
             <Pessoal
                 titulo="Comissão Organizadora"
                 descricao="As pessoas que ajudaram a tornar isso possível"
                 link="comissao"
-            ></Pessoal>
+            />
             <Pessoal
                 titulo="Patrocinadores"
                 descricao="Patrocinadores que contribuíram para o evento"
                 link="patrocinadores"
-            ></Pessoal>
+            />
         </main>
     );
 }
