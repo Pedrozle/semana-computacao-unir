@@ -18,8 +18,8 @@ export default function Sobre() {
                             pesquisadores, profissionais e demais interessados
                             em computação, objetivando a difusão da computação e
                             do seu bom uso, trazendo para o debate aberto, temas
-                            importantes relacionados à Ciência de Dados e Big
-                            data.
+                            importantes relacionados à Computação e Inovação
+                            Tecnológica
                         </p>
                         <p>
                             Nesta edição, o evento será integrado ao Workshop de
