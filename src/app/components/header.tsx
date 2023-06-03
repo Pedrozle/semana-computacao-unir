@@ -28,7 +28,7 @@ export default function Header() {
                         <Col>
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <Navbar.Collapse id="basic-navbar-nav">
-                                <Nav className="me-auto">
+                                <Nav className={`me-auto ${styles.links}`}>
                                     <Nav.Link href="#inicio">Início</Nav.Link>
                                     <Nav.Link href="#agenda">Agenda</Nav.Link>
                                     <Nav.Link href="#paineis">
