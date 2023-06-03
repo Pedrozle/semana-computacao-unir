@@ -2,31 +2,23 @@
 @import './variables.scss';
 
 body {
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-family: 'Oxanium', cursive;
-    font-family: 'Kalam', cursive;
-    font-family: 'Nova Mono', monospace;
-    font-family: 'Ysabeau', sans-serif;
     font-family: "Montserrat", sans-serif;
-    background-color: $cinza-bem-mais-escuro;
+    background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 64%, rgba(24,6,61,1) 100%);
     color: white;
     margin: 0;
 }
 
-
-.divider::before {
-    margin-bottom: 50px;
+.botao {
+    padding: 20px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background-color: $amarelor;
+    transition: 0.5s ease-out;
 }
 
-.divider::after {
-    margin-top: 75px;
-}
-
-.divider::before,
-.divider::after {
-    content: "";
-    display: block;
-    border-top: 1px solid #cecece5e;
-    width: 60%;
-    border-radius: 20px;
+.botao:hover {
+    background-color: $roxo-subtitulo;
+    color: white;
 }
