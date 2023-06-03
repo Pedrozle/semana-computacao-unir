@@ -42,7 +42,15 @@ export default function Footer() {
                     >
                         semana.computacao@unir.br
                     </a>
-                    <button className="botao">Inscreva-se na VI Semana da Computação</button>
+                    <button
+                        onClick={() =>
+                            (window.location.href =
+                                "https://www.eventbrite.com.br/e/vi-semana-da-computacao-tickets-643466023197")
+                        }
+                        className="botao"
+                    >
+                        Inscreva-se na VI Semana da Computação
+                    </button>
                 </div>
                 <div className={styles.direito}>
                     <div>
