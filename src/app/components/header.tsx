@@ -8,6 +8,7 @@ import Button from "react-bootstrap/Button";
 import { Col, Row } from "react-bootstrap";
 
 import styles from "@/styles/components/header.module.scss";
+import Botao from "./botao";
 
 export default function Header() {
     return (
@@ -36,15 +37,7 @@ export default function Header() {
                                     <Nav.Link href="#maratona">
                                         Maratona de programação
                                     </Nav.Link>
-                                    <Button
-                                        variant="primary"
-                                        onClick={() =>
-                                            (window.location.href =
-                                                "https://www.eventbrite.com.br/e/vi-semana-da-computacao-tickets-643466023197")
-                                        }
-                                    >
-                                        Inscreva-se!
-                                    </Button>
+                                    <Botao titulo="Inscreva-se" link=""/>
                                 </Nav>
                             </Navbar.Collapse>
                         </Col>

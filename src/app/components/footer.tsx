@@ -1,6 +1,7 @@
 "use client";
 import styles from "@/styles/components/footer.module.scss";
 import { Button } from "react-bootstrap";
+import Botao from "./botao";
 
 export default function Footer() {
     return (
@@ -42,15 +43,11 @@ export default function Footer() {
                     >
                         semana.computacao@unir.br
                     </a>
-                    <button
-                        onClick={() =>
-                            (window.location.href =
-                                "https://www.eventbrite.com.br/e/vi-semana-da-computacao-tickets-643466023197")
-                        }
-                        className="botao"
-                    >
-                        Inscreva-se na VI Semana da Computação
-                    </button>
+
+                    <Botao
+                        titulo="Inscreva-se na VI Semana da Computação"
+                        link=""
+                    />
                 </div>
                 <div className={styles.direito}>
                     <div>
