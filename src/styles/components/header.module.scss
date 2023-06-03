@@ -1,0 +1,12 @@
+@import './../variables.scss';
+
+.header {
+    background-color: $roxo-header;
+}
+
+.row {
+    width: 100%;
+    align-items: center;
+}
+
+@media screen and (max-width: 767px) {}
