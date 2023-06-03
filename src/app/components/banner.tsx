@@ -1,27 +1,31 @@
 "use client";
-import { Button } from "react-bootstrap";
+
 import styles from "@/styles//components/banner.module.scss";
+import Botao from "./botao";
+import Image from "next/image";
+
+import img from "@/assets/img/banner_img.svg";
 
 export default function Banner() {
     return (
         <div className={styles.inicio} id="inicio">
-            <div className={styles.banner_content}>
-                <h1 className={styles.title}>VI Semana da Computação</h1>
-                <p className={styles.descricao}>
-                    Universidade Federal de Rondônia - UNIR
-                </p>
-                <p className={styles.data}>26 à 30 jun. 2023</p>
-                <div className={styles.botao_info}>
-                    <Button
-                        className={styles.button}
-                        variant="primary"
-                        onClick={() =>
-                            (window.location.href =
-                                "https://www.eventbrite.com.br/e/vi-semana-da-computacao-tickets-643466023197")
-                        }
-                    >
-                        Inscreva-se!
-                    </Button>
+            <div className={styles.container}>
+                <div className={styles.info}>
+                    <div>
+                        <h1 className={styles.titulo}>
+                            VI Semana da Computação
+                        </h1>
+                        <p className={styles.subtitulo}>
+                            Universidade Federal de Rondônia - UNIR
+                        </p>
+                        <p className={styles.data}>26 à 30 jun. 2023</p>
+                    </div>
+                    <Image className={styles.img} src={img} alt="" />
+                    {/* <div>
+                    </div> */}
+                </div>
+                <div>
+                    <Botao titulo="Inscreva-se" link="" />
                 </div>
             </div>
         </div>
