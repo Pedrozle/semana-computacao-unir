@@ -8,7 +8,7 @@ export default function Sobre() {
             <div className={styles.conteudo}>
                 <p className={styles.title}>Sobre a Semana da Computação</p>
                 <div className={styles.descricao}>
-                    <div className={styles.texto}>
+                    <div>
                         <p>
                             A SEMANA DA COMPUTAÇÃO DA UNIR, antigamente
                             denominada INFOUNIR (Semana de Informática), é um
@@ -21,6 +21,10 @@ export default function Sobre() {
                             importantes relacionados à Computação e Inovação
                             Tecnológica
                         </p>
+                        <Image src={primeiro_dia} alt="" />
+                    </div>
+                    <div className={styles.texto}>
+                        <Image src={primeiro_dia} alt="" />
                         <p>
                             Nesta edição, o evento será integrado ao Workshop de
                             Tecnologias de Redes do PoP-RO, voltado para
@@ -29,12 +33,7 @@ export default function Sobre() {
                             ensino e pesquisa do estado de Rondônia.
                         </p>
                     </div>
-                    <div className={styles.foto}>
-                        <div className={styles.img}>
-                            <Image src={primeiro_dia} alt="" />
-                            <p>2022</p>
-                        </div>
-                    </div>
+                    <div className={styles.foto}></div>
                 </div>
             </div>
         </div>
