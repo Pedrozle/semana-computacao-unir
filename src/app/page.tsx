@@ -3,6 +3,7 @@ import Atividades from "./components/atividades";
 import MiddleBanner from "./components/middleBanner";
 import Sobre from "./components/sobre";
 import Onde from "./components/onde";
+import Agenda from "./components/agenda";
 
 export default function Page() {
     return (
@@ -13,6 +14,7 @@ export default function Page() {
             <Atividades link="palestras" title="Palestras" />
             <MiddleBanner />
             <Atividades link="minicursos" title="Minicursos" />
+            <Agenda />
         </main>
     );
 }
