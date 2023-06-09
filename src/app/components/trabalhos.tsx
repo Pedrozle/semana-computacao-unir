@@ -2,7 +2,7 @@ import styles from "@/styles/components/trabalhos.module.scss";
 import Image from "next/image";
 import { Button } from "react-bootstrap";
 
-import explica from "@/assets/img/explica.png"
+import explica from "@/assets/img/explica.png";
 
 export default function Trabalhos() {
     return (
@@ -20,7 +20,9 @@ export default function Trabalhos() {
                     </p>
                     <div className={styles.areas_submissao}>
                         <div className={styles.area}>
-                            <p className={styles.subtitle}>Áreas de submissão</p>
+                            <p className={styles.subtitle}>
+                                Áreas de submissão
+                            </p>
                             <p>
                                 Os resumos deverão ser submetidos em uma das
                                 cinco sessões temáticas pertinentes aos
@@ -53,11 +55,11 @@ export default function Trabalhos() {
                         </div>
                     </div>
                 </div>
-                <Button className={styles.button}
+                <Button
+                    className={styles.button}
                     variant="primary"
                     onClick={() =>
-                        (window.location.href =
-                            "https://www.eventbrite.com.br/e/vi-semana-da-computacao-tickets-643466023197")
+                        (window.location.href = `${process.env.SUBMISSAO_LINK}`)
                     }
                 >
                     Saiba mais na EventBrite

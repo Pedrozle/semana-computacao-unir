@@ -8,6 +8,8 @@ const nextConfig = {
     },
     env: {
         DATABASE_URL: process.env.DATABASE_CONNECTION,
+        INSCRICAO_LINK: process.env.INSCRICAO_LINK,
+        SUBMISSAO_LINK: process.env.SUBMISSAO_LINK
     },
 };
 
