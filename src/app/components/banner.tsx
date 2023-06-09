@@ -17,7 +17,7 @@ export default function Banner() {
                         variant="primary"
                         onClick={() =>
                             (window.location.href =
-                                "https://www.eventbrite.com.br/e/vi-semana-da-computacao-tickets-643466023197")
+                                `${process.env.INSCRICAO_LINK}`)
                         }
                     >
                         Inscreva-se!

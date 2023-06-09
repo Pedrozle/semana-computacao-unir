@@ -23,16 +23,7 @@ export default function Maratona() {
                     </p>
                     <Image className={styles.img} src={computador} alt=""/>
                 </div>
-                <Button
-                    className={styles.button}
-                    variant="primary"
-                    onClick={() =>
-                        (window.location.href =
-                            "https://www.eventbrite.com.br/e/vi-semana-da-computacao-tickets-643466023197")
-                    }
-                >
-                    Saiba mais na EventBrite
-                </Button>
+                
             </div>
         </div>
     );
