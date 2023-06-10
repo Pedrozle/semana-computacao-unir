@@ -4,6 +4,7 @@ import MiddleBanner from "./components/middleBanner";
 import Sobre from "./components/sobre";
 import Onde from "./components/onde";
 import Agenda from "./components/agenda";
+import Comissao from "./components/comissao";
 
 export default function Page() {
     return (
@@ -15,6 +16,7 @@ export default function Page() {
             <MiddleBanner />
             <Atividades link="minicursos" title="Minicursos" />
             <Agenda />
+            <Comissao />
         </main>
     );
 }

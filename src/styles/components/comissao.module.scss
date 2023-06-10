@@ -1,0 +1,39 @@
+@import './../variables.scss';
+
+.pessoal {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    margin: 20px 0;
+    margin-left: 20px;
+}
+
+.cabecalho{
+    width: 20vw;
+}
+
+.titulo{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.subtitulo{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.carrossel{
+    margin-left: 50px;
+    width: 70vw;
+    display: flex;
+    overflow-x: scroll;
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+ 
+}

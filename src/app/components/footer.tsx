@@ -46,7 +46,7 @@ export default function Footer() {
 
                     <Botao
                         titulo="Inscreva-se na VI Semana da Computação"
-                        link=""
+                        link={`${process.env.INSCRICAO_LINK}`}
                     />
                 </div>
                 <div className={styles.direito}>

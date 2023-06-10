@@ -17,7 +17,7 @@ export default function Header() {
                 <Container>
                     <Row className={styles.row}>
                         <Col>
-                            <Navbar.Brand href="#home">
+                            <Navbar.Brand href="/">
                                 <Image
                                     src={Logo}
                                     alt="Logo semana da computação"
@@ -29,15 +29,15 @@ export default function Header() {
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className={`me-auto ${styles.links}`}>
-                                    <Nav.Link href="#inicio">Início</Nav.Link>
-                                    <Nav.Link href="#agenda">Agenda</Nav.Link>
-                                    <Nav.Link href="#paineis">
+                                    <Nav.Link href="/">Início</Nav.Link>
+                                    <Nav.Link href="/agenda">Agenda</Nav.Link>
+                                    <Nav.Link href="/sessao-trabalhos">
                                         Sessão de painéis
                                     </Nav.Link>
-                                    <Nav.Link href="#maratona">
+                                    <Nav.Link href="/maratona">
                                         Maratona de programação
                                     </Nav.Link>
-                                    <Botao titulo="Inscreva-se" link=""/>
+                                    <Botao titulo="Inscreva-se" link={`${process.env.INSCRICAO_LINK}`}/>
                                 </Nav>
                             </Navbar.Collapse>
                         </Col>

@@ -25,7 +25,7 @@ export default function Banner() {
                     </div> */}
                 </div>
                 <div>
-                    <Botao titulo="Inscreva-se" link="" />
+                    <Botao titulo="Inscreva-se" link={`${process.env.INSCRICAO_LINK}`} />
                 </div>
             </div>
         </div>
