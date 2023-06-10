@@ -10,7 +10,7 @@ export default function Page() {
         <div className={styles.trabalhos}>
             <div className={styles.cabecalho}>
                 <p className={styles.titulo}>
-                    printf(&quout;Sessão de paineis&quout;)
+                    printf(&quot;Sessão de paineis&quot;)
                 </p>
                 <p className={styles.descricao}>
                     Aqui você encontrará todas as informações para que você

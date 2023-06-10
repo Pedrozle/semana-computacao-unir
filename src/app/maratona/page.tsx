@@ -88,7 +88,7 @@ export default function Page() {
                 Ficou interessado? Inscreva a sua equipe e participe :D
             </p>
             <Botao
-                titulo="Submeter Trabalho"
+                titulo="Quero participar"
                 link={`${process.env.SUBMISSAO_LINK}`}
             />
         </div>
