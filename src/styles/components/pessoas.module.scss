@@ -1,55 +1,96 @@
 @import './../variables.scss';
 
-.pessoas{
+.pessoas {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
+    margin: 100px 0;
 }
 
-.titulo{
+.titulo {
     font-weight: bold;
     font-size: 3em;
     transform: translateY(-100px);
 }
 
-.img{
+.img {
     height: auto;
     width: 500px;
 }
 
-.pessoal{
+.pessoal {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.pessoa_container{
+.pessoa_container {
+    width: 50vw;
+    padding: 50px 0;
+}
+
+.pessoa_container::after {
+    content: "";
+    display: block;
+    width: 25vw;
+    position: absolute;
+}
+
+.pessoa_container::after {
+    border-bottom: 1px solid #cecece5e;
+    transform: translate(50%, 20px);
+}
+
+.pessoa_content {
     display: flex;
 }
 
-.pessoa_container::before,
-.pessoa_container::after{
-    content: "";
-    display: block;
-    border-top: 1px solid #cecece5e;
-    width: 60%;
-    border-radius: 20px;
-}
-
-.pessoa_img{
+.pessoa_img {
     border-radius: 50px;
-    width: 500px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
 }
 
-.detalhes{
+.detalhes {
     margin-left: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 80vw;
 }
 
-.nome{
+.nome {
     font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+.apoio_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    width: 80vw;
+    justify-items: center;
+}
+
+.apoio_content {
+    text-align: center;
+}
+
+.apoio_img {
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.apoio_nome {
+    margin-top: 20px;
     font-weight: bold;
 }

@@ -17,7 +17,9 @@ export default function Page() {
             <MiddleBanner />
             <Atividades link="minicursos" title="Minicursos" />
             <Agenda />
-            <Pessoas />
+            <Pessoas titulo="Palestrantes" link="palestrantes" />
+            <Pessoas titulo="Patrocinadores" link="patrocinadores" />
+            <Pessoas titulo="Apoio" link="apoio" />
             <Comissao />
         </main>
     );
