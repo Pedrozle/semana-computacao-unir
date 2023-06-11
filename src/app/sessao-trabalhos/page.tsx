@@ -1,5 +1,5 @@
 "use client";
-import styles from "@/styles/components/sessao-trabalhos.module.scss";
+import styles from "@/styles/sessao-trabalhos.module.scss";
 import Botao from "../components/botao";
 import Image from "next/image";
 

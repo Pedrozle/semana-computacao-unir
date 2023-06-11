@@ -30,7 +30,7 @@ export default function Header() {
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className={`me-auto ${styles.links}`}>
                                     <Nav.Link href="/">Início</Nav.Link>
-                                    <Nav.Link href="/agenda">Agenda</Nav.Link>
+                                    <Nav.Link href="/programacao">Programação</Nav.Link>
                                     <Nav.Link href="/sessao-trabalhos">
                                         Sessão de painéis
                                     </Nav.Link>

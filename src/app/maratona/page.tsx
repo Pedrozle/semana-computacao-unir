@@ -1,5 +1,5 @@
 "use client";
-import styles from "@/styles/components/maratona.module.scss";
+import styles from "@/styles/maratona.module.scss";
 import Botao from "../components/botao";
 
 export default function Page() {
