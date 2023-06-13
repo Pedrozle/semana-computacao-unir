@@ -8,7 +8,7 @@ import img from "@/assets/img/banner_img.svg";
 
 export default function Banner() {
     return (
-        <div className={styles.inicio} id="inicio">
+        <div className={styles.inicio}>
             <div className={styles.container}>
                 <div className={styles.info}>
                     <div>

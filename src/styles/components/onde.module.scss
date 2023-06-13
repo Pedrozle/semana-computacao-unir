@@ -97,18 +97,43 @@
 
 @media screen and (max-width: 767px) {
 
-    .banner {
-        height: 70vh;
+    .onde {
+        margin-bottom: 0;
     }
 
-    .info {
-        flex-direction: column;
+    .conteudo {
+        width: 80vw;
+    }
+
+    .foto_mapa {
+        width: 80%;
+    }
+
+    .img {
+        width: 90vw;
     }
 
     .map {
-        margin-left: 0;
-        width: 80vw;
-        height: 200px;
+        display: none;
+    }
+
+    .info {
+        width: 90%;
+    }
+
+    .chamado {
+        width: 90%;
+        margin-bottom: 0;
+    }
+
+    .title_chamado {
+        font-size: 1.5em;
+        width: 90%;
+    }
+
+    .bloco1,
+    .bloco2 {
+        opacity: 0;
     }
 
 }

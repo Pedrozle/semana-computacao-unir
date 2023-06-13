@@ -94,3 +94,26 @@
     margin-top: 20px;
     font-weight: bold;
 }
+
+
+@media screen and (max-width: 767px) {
+    .pessoa_container {
+        width: 90vw
+    }
+
+    .pessoa_content{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .apoio_container{
+        
+    grid-template-columns: repeat(1, 1fr);
+    }
+
+    .detalhes {
+        margin-left: 0;
+    }
+
+}

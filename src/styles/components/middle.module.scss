@@ -32,8 +32,12 @@
 
 @media screen and (max-width: 767px) {
 
+    .conteudo{
+        flex-direction: column;
+    }
+
     .title{
-        font-size: 1.1em;
+        text-align: center;
     }
 
 }

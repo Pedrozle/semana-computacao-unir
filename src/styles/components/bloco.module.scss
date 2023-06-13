@@ -34,3 +34,14 @@
     text-shadow: 1px 1px black;
     text-align: center;
 }
+
+
+@media screen and (max-width: 767px) {
+    .bloco{
+        width: 90%;
+    }
+
+    .nome, .descricao{
+        width: 60%;
+    }
+}
