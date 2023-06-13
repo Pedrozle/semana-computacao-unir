@@ -13,14 +13,14 @@ export default function Page() {
             <Banner />
             <Sobre />
             <Onde />
-            <Atividades link="palestras" title="Palestras" />
-            <MiddleBanner />
-            <Atividades link="minicursos" title="Minicursos" />
+            <Atividades link="atividades/palestras" title="Palestras" />
+            {/* <MiddleBanner />
+            <Atividades link="atividades/minicursos" title="Minicursos" />
             <Agenda />
             <Pessoas titulo="Palestrantes" link="palestrantes" />
             <Pessoas titulo="Patrocinadores" link="patrocinadores" />
             <Pessoas titulo="Apoio" link="apoio" />
-            <Comissao />
+            <Comissao /> */}
         </main>
     );
 }
