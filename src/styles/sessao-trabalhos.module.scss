@@ -61,4 +61,11 @@
     height: auto;
 }
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+    .titulo{
+        font-size: 1.9em;
+    }
+    .area_lista{
+        flex-direction: column;
+    }
+}
