@@ -1,68 +1,139 @@
 @import './../variables.scss';
 
 .onde {
-    background-color: $cinza-mais-escuro;
-    height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    margin: 50px 0;
+    padding: 50px 0;
 }
 
-.banner {
-    width: 100%;
-    height: 50%;
-    border-radius: 10px;
-    background-image: url(./../../assets/img/unir.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.2;
-    position: absolute;
-}
-
-.info {
+.conteudo {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    z-index: 1;
+    justify-content: center;
 }
 
-.info p {
-    font-size: 1.2em;
-    padding: 10px;
+.foto_mapa {
+    background-color: $amarelor;
+    display: block;
+
+    .map {
+        display: none;
+    }
 }
 
-.title {
-    font-size: 1.5em;
-    font-weight: bold;
-    text-align: center;
+.foto_mapa:hover {
+    .map {
+        display: block;
+    }
+
+}
+
+.img {
+    transform: translate(-50px, -50px);
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
+    border: 10px solid white;
+    border-radius: 20px;
 }
 
 .map {
-    margin-left: 50px;
-    border-radius: 10px;
-    position: relative;
-    z-index: 10;
-    width: 600px;
-    height: 350px;
+    position: absolute;
+    transform: translate(-50px, -450px);
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
+    border: 10px solid white;
+    border-radius: 20px;
 }
 
+.title {
+    background-color: $vinnho;
+    width: fit-content;
+    padding: 10px 40px;
+    margin-bottom: 0;
+    transform: translate(-90px, -30px);
+
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.chamado {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title_chamado {
+    font-weight: bold;
+    font-size: 3em;
+    position: absolute;
+    transform: translateY(60px);
+    z-index: 2;
+}
+
+.bloco1,
+.bloco2 {
+    padding: 75px 400px;
+    content: "";
+}
+
+.bloco1 {
+    z-index: 1;
+    background-color: $roxor;
+    transform: translate(-150px, 50px);
+}
+
+.bloco2 {
+    background-color: $azul-unir;
+    transform: translate(150px, -60px);
+
+}
 
 @media screen and (max-width: 767px) {
 
-    .banner{
-        height: 70vh;
+    .onde {
+        margin-bottom: 0;
+    }
+
+    .conteudo {
+        width: 80vw;
+    }
+
+    .foto_mapa {
+        width: 80%;
+    }
+
+    .img {
+        width: 90vw;
+    }
+
+    .map {
+        display: none;
     }
 
     .info {
-        flex-direction: column;
+        width: 90%;
     }
 
-    .map{
-        margin-left: 0;
-        width: 80vw;
-        height: 200px;
+    .chamado {
+        width: 90%;
+        margin-bottom: 0;
+    }
+
+    .title_chamado {
+        font-size: 1.5em;
+        width: 90%;
+    }
+
+    .bloco1,
+    .bloco2 {
+        opacity: 0;
     }
 
 }

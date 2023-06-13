@@ -1,13 +1,11 @@
-"use client";
 import Banner from "@/app/components/banner";
-import Sobre from "@/app/components/sobre";
-import Onde from "./components/onde";
-import MiddleBanner from "./components/middleBanner";
 import Atividades from "./components/atividades";
-import Galeria from "./components/galeria";
-import Pessoal from "./components/pessoal";
-import Trabalhos from "./components/trabalhos";
-import Maratona from "./components/maratona";
+import MiddleBanner from "./components/middleBanner";
+import Sobre from "./components/sobre";
+import Onde from "./components/onde";
+import Agenda from "./components/agenda";
+import Comissao from "./components/comissao";
+import Pessoas from "./components/pessoas";
 
 export default function Page() {
     return (
@@ -15,23 +13,14 @@ export default function Page() {
             <Banner />
             <Sobre />
             <Onde />
+            <Atividades link="atividades/palestras" title="Palestras" />
             <MiddleBanner />
-            <Atividades title="Palestras" link="palestras" />
-            <MiddleBanner />
-            <Atividades title="Minicursos" link="minicursos" />
-            <Galeria />
-            <Trabalhos />
-            <Maratona />
-            <Pessoal
-                titulo="Comissão Organizadora"
-                descricao="As pessoas que ajudaram a tornar isso possível"
-                link="comissao"
-            />
-            <Pessoal
-                titulo="Patrocinadores"
-                descricao="Patrocinadores que contribuíram para o evento"
-                link="patrocinadores"
-            />
+            <Atividades link="atividades/minicursos" title="Minicursos" />
+            <Agenda />
+            <Pessoas titulo="Palestrantes" link="palestrantes" />
+            <Pessoas titulo="Patrocinadores" link="patrocinadores" />
+            <Pessoas titulo="Apoio" link="apoio" />
+            <Comissao />
         </main>
     );
 }

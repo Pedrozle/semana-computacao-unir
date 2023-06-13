@@ -11,10 +11,12 @@ interface Props {
 }
 
 interface Atividade {
+    atividade?: number;
     titulo: string;
-    palestrante: string;
-    descricao: string;
+    ministrante: string;
+    local: string;
     data: string;
+    hora: string;
     img: string;
 }
 
@@ -34,9 +36,10 @@ async function getAtividades(link: string) {
 
         return {
             titulo: atividade.titulo,
-            palestrante: atividade.palestrante,
-            descricao: atividade.descricao,
+            ministrante: atividade.ministrante,
+            local: atividade.local,
             data: atividade.data,
+            hora: atividade.hora,
             img: atividade.img ? URL.createObjectURL(blob) : "",
         };
     });
@@ -109,23 +112,13 @@ export default function Atividades(props: Props) {
                                                         styles.palestrante
                                                     }
                                                 >
-                                                    {atividade.palestrante}
-                                                </p>
-                                                <p className={styles.datahora}>
-                                                    {atividade.data}
+                                                    {atividade.ministrante}
                                                 </p>
                                                 <div
-                                                    className={
-                                                        styles.decricao_content
-                                                    }
+                                                    className={styles.datahora}
                                                 >
-                                                    <p
-                                                        className={
-                                                            styles.descricao
-                                                        }
-                                                    >
-                                                        {atividade.descricao}
-                                                    </p>
+                                                    <p>{atividade.data} <br/> às {atividade.hora}</p>
+                                                    <p>Local: {atividade.local}</p>
                                                 </div>
                                             </div>
                                         </Carousel.Item>

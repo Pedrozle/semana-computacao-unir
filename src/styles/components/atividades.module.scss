@@ -3,9 +3,9 @@
 /*-----------------------------------------------------------------*/
 
 .atividades {
+    background-color: $azul-unir;
     display: flex;
     flex-direction: column;
-    background-color: $azul-unir;
     color: black;
     justify-content: center;
     align-items: center;
@@ -29,16 +29,13 @@
 
 .palestrante {
     font-weight: bold;
-}
+    text-align: center;
+    font-size: 1.1em;
 
-
-.descricao {
-    text-align: start;
-    overflow: auto
 }
 
 .legenda_title {
-    font-size: 1.3em;
+    font-size: 1.5em;
     margin-bottom: 20px;
     text-align: center;
 }
