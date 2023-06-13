@@ -12,7 +12,7 @@ import Botao from "./botao";
 
 export default function Header() {
     return (
-        <header>
+        <header >
             <Navbar className={styles.header} expand="lg" variant="dark">
                 <Container>
                     <Row className={styles.row}>
