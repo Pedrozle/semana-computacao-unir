@@ -6,9 +6,9 @@ export async function GET(req, res) {
     let atividade = "";
     console.log(colecao);
 
-    if (colecao.includes("/")) {
-        colecao = colecao.split("/")[0];
-        atividade = colecao.split("/")[1];
+    if (colecao.includes("-")) {
+        colecao = colecao.split("-")[0];
+        atividade = colecao.split("-")[1];
     }
 
     const client = new MongoClient(`${process.env.DATABASE_URL}`, {
