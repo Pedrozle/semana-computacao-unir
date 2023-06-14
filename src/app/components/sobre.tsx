@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "@/styles/components/sobre.module.scss";
 import primeiro_dia from "@/assets/img/sobre.jpeg";
+import minicurso from "@/assets/img/minicurso.jpg";
 
 export default function Sobre() {
     return (
@@ -26,7 +27,7 @@ export default function Sobre() {
                     </div>
                     <div className={styles.info}>
                         <Image
-                            src={primeiro_dia}
+                            src={minicurso}
                             alt=""
                             className={`${styles.img} ${styles.img_2}`}
                         />

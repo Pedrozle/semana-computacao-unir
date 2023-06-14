@@ -55,7 +55,7 @@ export default function Page() {
     useEffect(() => {
         // Exemplo de função assíncrona que retorna uma Promise
         async function obterArray() {
-            const arrayRetornado = await getAtividades("atividades/abertura");
+            const arrayRetornado = await getAtividades("atividades-abertura");
             setAtividades(arrayRetornado);
         }
 
@@ -63,7 +63,8 @@ export default function Page() {
     }, []); // Certifique-se de fornecer um array vazio para o useEffect para que ele seja executado apenas uma vez
 
     async function buscarAtividades(link: string) {
-        const arrayRetornado = await getAtividades(`atividades/${link}`);
+        setAtividades([]);
+        const arrayRetornado = await getAtividades(`atividades-${link}`);
         setAtividades(arrayRetornado);
     }
 
