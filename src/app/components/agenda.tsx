@@ -18,7 +18,7 @@ export default function Agenda() {
                     <p className={styles.subtitle}>
                         Então dá uma conferida na programação completa do evento
                     </p>
-                    <Botao link="" titulo="Agenda" />
+                    <Botao link="/programacao" titulo="Agenda" />
                 </div>
             </div>
         </div>

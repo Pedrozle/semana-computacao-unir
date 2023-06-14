@@ -9,7 +9,7 @@ export default function MiddleBanner() {
                 <p className={styles.title}>
                     Veja a programação completa em nossa 
                 </p>
-                <Botao titulo="Agenda" link=""/>
+                <Botao titulo="Agenda" link="/programacao"/>
             </div>
         </div>
     );

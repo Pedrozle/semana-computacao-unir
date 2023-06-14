@@ -7,8 +7,8 @@ export async function GET(req, res) {
     console.log(colecao);
 
     if (colecao.includes("/")) {
-        atividade = colecao.split("/")[1];
         colecao = colecao.split("/")[0];
+        atividade = colecao.split("/")[1];
     }
 
     const client = new MongoClient(`${process.env.DATABASE_URL}`, {
