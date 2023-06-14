@@ -21,8 +21,6 @@ export default function Banner() {
                         <p className={styles.data}>26 à 30 jun. 2023</p>
                     </div>
                     <Image className={styles.img} src={img} alt="" />
-                    {/* <div>
-                    </div> */}
                 </div>
                 <div>
                     <Botao titulo="Inscreva-se" link={`${process.env.INSCRICAO_LINK}`} />

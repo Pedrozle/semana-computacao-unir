@@ -4,6 +4,8 @@ import Carousel from "react-bootstrap/Carousel";
 import base64ToBlob from "@/services/fotoConversor";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import blocos2 from "@/assets/img/blocos2.svg";
 
 interface Props {
     title: string;
@@ -66,12 +68,11 @@ export default function Atividades(props: Props) {
                 <></>
             ) : (
                 <>
-                    <div
-                        id={props.title.toLowerCase()}
-                        className={styles.atividades}
-                    >
+                    <div className={styles.atividades}>
+                        <Image src={blocos2} alt="" className={styles.blocos} />
+                        <p className={styles.title}>{props.title}</p>
+
                         <div className={styles.conteudo}>
-                            <p className={styles.title}>{props.title}</p>
                             <Carousel>
                                 {atividades.map(
                                     (atividade: Atividade, index: number) => (
@@ -117,8 +118,13 @@ export default function Atividades(props: Props) {
                                                 <div
                                                     className={styles.datahora}
                                                 >
-                                                    <p>{atividade.data} <br/> às {atividade.hora}</p>
-                                                    <p>Local: {atividade.local}</p>
+                                                    <p>
+                                                        {atividade.data} <br />{" "}
+                                                        às {atividade.hora}
+                                                    </p>
+                                                    <p>
+                                                        Local: {atividade.local}
+                                                    </p>
                                                 </div>
                                             </div>
                                         </Carousel.Item>

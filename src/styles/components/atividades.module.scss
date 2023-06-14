@@ -20,11 +20,17 @@
 }
 
 .title {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
     color: white;
+    transform: translateY(-100px);
+}
+
+.blocos {
+    height: auto;
+    width: 500px;
 }
 
 .palestrante {
@@ -99,7 +105,7 @@
         font-size: 0.8em;
     }
 
-    .mask{
+    .mask {
         height: 20vh;
     }
 

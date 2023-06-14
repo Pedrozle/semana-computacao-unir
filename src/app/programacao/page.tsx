@@ -14,7 +14,6 @@ interface Atividade {
     local: string;
     data: string;
     hora: string;
-    img: string;
     palestrante_img_1?: string;
     palestrante_img_2?: string;
 }
@@ -29,9 +28,14 @@ async function getAtividades(link: string) {
     let atividades: Array<Atividade> = await res.json();
 
     atividades = atividades.map((atividade: Atividade) => {
-        let blob: Blob = atividade.img
-            ? base64ToBlob(atividade.img)
-            : new Blob();
+        let palestrante_img_1_blob: Blob =
+            atividade.palestrante_img_1?.includes("data=")
+                ? base64ToBlob(atividade.palestrante_img_1)
+                : new Blob();
+        let palestrante_img_2_blob: Blob =
+            atividade.palestrante_img_2?.includes("data=")
+                ? base64ToBlob(atividade.palestrante_img_2)
+                : new Blob();
 
         return {
             atividade: atividade.atividade,
@@ -40,7 +44,13 @@ async function getAtividades(link: string) {
             local: atividade.local,
             data: atividade.data,
             hora: atividade.hora,
-            img: atividade.img ? URL.createObjectURL(blob) : "",
+            palestrante_img_1:
+                palestrante_img_1_blob.type === "image/jpeg"
+                    ? URL.createObjectURL(palestrante_img_1_blob)
+                    : "",
+            palestrante_img_2: palestrante_img_2_blob.type === "image/jpeg"
+            ? URL.createObjectURL(palestrante_img_2_blob)
+            : "",
         };
     });
     console.log(atividades);
@@ -55,7 +65,7 @@ export default function Page() {
     useEffect(() => {
         // Exemplo de função assíncrona que retorna uma Promise
         async function obterArray() {
-            const arrayRetornado = await getAtividades("atividades/abertura");
+            const arrayRetornado = await getAtividades("atividades-abertura");
             setAtividades(arrayRetornado);
         }
 
@@ -63,7 +73,8 @@ export default function Page() {
     }, []); // Certifique-se de fornecer um array vazio para o useEffect para que ele seja executado apenas uma vez
 
     async function buscarAtividades(link: string) {
-        const arrayRetornado = await getAtividades(`atividades/${link}`);
+        setAtividades([]);
+        const arrayRetornado = await getAtividades(`atividades-${link}`);
         setAtividades(arrayRetornado);
     }
 

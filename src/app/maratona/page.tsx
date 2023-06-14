@@ -10,7 +10,8 @@ export default function Page() {
                     printf(&quot;Maratona de Programação&quot;)
                 </p>
                 <p className={styles.descricao}>
-                    Vai rolar Maratona de programação na Semana da Computação!
+                    Vai rolar Maratona de programação na Semana da Computação! <br/>
+                    Dia 28 de junho das 14h às 18h,
                     Confira as informações sobre logo abaixo ;)
                 </p>
             </div>
@@ -59,11 +60,11 @@ export default function Page() {
                                 </a>
                             </li>
                             <li>
-                                Boca:
+                                Boca:{" "}
                                 <a href="https://github.com/maratona-linux/maratona-linux">
                                     https://github.com/maratona-linux/maratona-linux
                                 </a>
-                                (Deve ser instalado em cada computador).
+                                {" "}(Deve ser instalado em cada computador).
                             </li>
                         </ul>
                     </div>

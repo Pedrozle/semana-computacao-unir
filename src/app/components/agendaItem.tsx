@@ -28,7 +28,7 @@ export default function AgendaItem(props: Props) {
                 {props.palestrante_img_1 && (
                     <>
                         <img
-                            src="https://placehold.co/600x400"
+                            src={props.palestrante_img_1}
                             alt=""
                             className={styles.img}
                         />
@@ -37,7 +37,7 @@ export default function AgendaItem(props: Props) {
                 {props.palestrante_img_2 && (
                     <>
                         <img
-                            src="https://placehold.co/600x400"
+                            src={props.palestrante_img_2}
                             alt=""
                             className={`${styles.img} ${styles.second}`}
                         />
