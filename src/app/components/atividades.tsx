@@ -77,54 +77,63 @@ export default function Atividades(props: Props) {
                                 {atividades.map(
                                     (atividade: Atividade, index: number) => (
                                         <Carousel.Item key={index}>
-                                            <div className={styles.mask}>
-                                                {atividade.img.length > 0 ? (
-                                                    <>
-                                                        <img
-                                                            src={atividade.img}
-                                                            alt=""
-                                                            className={
-                                                                styles.img
-                                                            }
-                                                        />
-                                                    </>
-                                                ) : (
-                                                    <>
-                                                        <img
-                                                            src="https://placehold.co/600x400"
-                                                            alt=""
-                                                            className={
-                                                                styles.img
-                                                            }
-                                                        />
-                                                    </>
-                                                )}
-                                            </div>
-                                            <div className={styles.caption}>
-                                                <p
-                                                    className={
-                                                        styles.legenda_title
-                                                    }
-                                                >
-                                                    {atividade.titulo}
-                                                </p>
-                                                <p
-                                                    className={
-                                                        styles.palestrante
-                                                    }
-                                                >
-                                                    {atividade.ministrante}
-                                                </p>
-                                                <div
-                                                    className={styles.datahora}
-                                                >
-                                                    <p>
-                                                        {atividade.data} <br />{" "}
-                                                        às {atividade.hora}
+                                            <div className={styles.data}>
+                                                <div className={styles.mask}>
+                                                    {atividade.img.length >
+                                                    0 ? (
+                                                        <>
+                                                            <img
+                                                                src={
+                                                                    atividade.img
+                                                                }
+                                                                alt=""
+                                                                className={
+                                                                    styles.img
+                                                                }
+                                                            />
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                            <img
+                                                                src="https://placehold.co/600x400"
+                                                                alt=""
+                                                                className={
+                                                                    styles.img
+                                                                }
+                                                            />
+                                                        </>
+                                                    )}
+                                                </div>
+                                                <div className={styles.caption}>
+                                                    <p
+                                                        className={
+                                                            styles.legenda_title
+                                                        }
+                                                    >
+                                                        {atividade.titulo}
                                                     </p>
-                                                    <p>
-                                                        Local: {atividade.local}
+                                                    <p
+                                                        className={
+                                                            styles.palestrante
+                                                        }
+                                                    >
+                                                        {atividade.ministrante}
                                                     </p>
+                                                    <div
+                                                        className={
+                                                            styles.datahora
+                                                        }
+                                                    >
+                                                        <p>
+                                                            {atividade.data}{" "}
+                                                            <br /> às{" "}
+                                                            {atividade.hora}
+                                                        </p>
+                                                        <p>
+                                                            Local:{" "}
+                                                            {atividade.local}
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </Carousel.Item>
