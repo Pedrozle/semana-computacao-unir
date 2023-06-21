@@ -90,7 +90,7 @@ export default function Page() {
             </p>
             <Botao
                 titulo="Quero participar"
-                link={`${process.env.SUBMISSAO_LINK}`}
+                link={`${process.env.MARATONA_LINK}`}
             />
         </div>
     );

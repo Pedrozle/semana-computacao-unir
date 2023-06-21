@@ -90,6 +90,17 @@
     object-position: center;
 }
 
+.apoio_link {
+    color: white;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.apoio_link:hover {
+    color: $azul;
+
+}
+
 .apoio_nome {
     margin-top: 20px;
     font-weight: bold;
@@ -101,15 +112,15 @@
         width: 90vw
     }
 
-    .pessoa_content{
+    .pessoa_content {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .apoio_container{
-        
-    grid-template-columns: repeat(1, 1fr);
+    .apoio_container {
+
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .detalhes {
