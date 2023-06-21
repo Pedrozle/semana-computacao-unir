@@ -28,14 +28,12 @@ async function getAtividades(link: string) {
     let atividades: Array<Atividade> = await res.json();
 
     atividades = atividades.map((atividade: Atividade) => {
-        let palestrante_img_1_blob: Blob =
-            atividade.palestrante_img_1?.includes("data=")
-                ? base64ToBlob(atividade.palestrante_img_1)
-                : new Blob();
-        let palestrante_img_2_blob: Blob =
-            atividade.palestrante_img_2?.includes("data=")
-                ? base64ToBlob(atividade.palestrante_img_2)
-                : new Blob();
+        let palestrante_img_1_blob: Blob = atividade.palestrante_img_1
+            ? base64ToBlob(atividade.palestrante_img_1)
+            : new Blob();
+        let palestrante_img_2_blob: Blob = atividade.palestrante_img_2
+            ? base64ToBlob(atividade.palestrante_img_2)
+            : new Blob();
 
         return {
             atividade: atividade.atividade,
@@ -48,9 +46,10 @@ async function getAtividades(link: string) {
                 palestrante_img_1_blob.type === "image/jpeg"
                     ? URL.createObjectURL(palestrante_img_1_blob)
                     : "",
-            palestrante_img_2: palestrante_img_2_blob.type === "image/jpeg"
-            ? URL.createObjectURL(palestrante_img_2_blob)
-            : "",
+            palestrante_img_2:
+                palestrante_img_2_blob.type === "image/jpeg"
+                    ? URL.createObjectURL(palestrante_img_2_blob)
+                    : "",
         };
     });
     console.log(atividades);

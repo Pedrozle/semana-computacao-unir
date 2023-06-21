@@ -15,6 +15,7 @@ interface Pessoal {
     nome: string;
     descricao: string;
     img: string;
+    link: string;
 }
 
 async function getPessoal(link: string) {
@@ -33,6 +34,7 @@ async function getPessoal(link: string) {
         return {
             nome: pessoa.nome,
             descricao: pessoa.descricao,
+            link: pessoa.link,
             img:
                 blob.type === "image/jpeg"
                     ? URL.createObjectURL(blob)
@@ -99,14 +101,24 @@ export default function Pessoal(props: Props) {
                                             className={styles.apoio_content}
                                             key={index}
                                         >
-                                            <img
-                                                src={pessoa.img}
-                                                alt=""
-                                                className={styles.apoio_img}
-                                            />
-                                            <p className={styles.apoio_nome}>
-                                                {pessoa.nome}
-                                            </p>
+                                            <a
+                                                href={pessoa.link}
+                                                target="_blank"
+                                                className={styles.apoio_link}
+                                            >
+                                                <img
+                                                    src={pessoa.img}
+                                                    alt=""
+                                                    className={styles.apoio_img}
+                                                />
+                                                <p
+                                                    className={
+                                                        styles.apoio_nome
+                                                    }
+                                                >
+                                                    {pessoa.nome}
+                                                </p>
+                                            </a>
                                         </div>
                                     ))}
                                 </div>
